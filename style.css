@@ -228,3 +228,76 @@
     justify-content: center;
     cursor: pointer;
 }
+
+.cards {
+    margin-top: 111px;
+}
+
+.cards .sorted-card-div h2 {
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.all-cards {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 43px;
+}
+
+.sorted-card-div .all-cards div {
+    cursor: pointer;
+    width: 180px;
+    height: 44.967px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    display: flex;
+    background-color: #d9d9d9;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.all-cards .active {
+    background: #d02c2c !important;
+    color: #fff !important;
+}
+
+.cards .cardLists {
+    margin-top: 37px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.cardLists div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 208px;
+    height: 87.496px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #eaeaea;
+}
+
+.category {
+    margin-top: 110px;
+}
+
+.category h2 {
+    color: #000;
+    font-size: 40px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
