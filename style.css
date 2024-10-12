@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    list-style: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.top-navbar {
+    background-color: #ededed;
+    height: 90px;
+}
+
+.navbar .top-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.navbar .top-navbar .container p {
+    color: #000;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top-navbar-end {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-navbar-end a {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bottom-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-navbar ul li {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.bottom-navbar ul li a {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bottom-navbar button {
+    background-color: #d02c2c;
+    width: 187px;
+    height: 49.528px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.search-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+}
+
+.search-block input {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 46.516px;
+    outline: none;
+    color: #000;
+    font-size: 20px;
+    padding-left: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.search-block button {
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 187px;
+    height: 48.494px;
+    flex-shrink: 0;
+    background-color: #d02c2c;
+}
