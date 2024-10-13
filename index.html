@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script src="/app.js" defer></script>
     <title></title>
 </head>
@@ -260,140 +261,572 @@
         </div>
 
         <div class="motor">
-            <div style="display: flex; align-items: center; justify-content: space-between;">
-                <div>
+            <div class="motor-header" style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; flex-direction: column; gap: 27px;">
                     <h2>Моторные масла</h2>
-                    <button class="orginal">Original</button>
-                    <button class="brand">Brand</button>
-                </div>
-                <div class="motor-arrow-div">
-                    <img src="/images/arrow-left.png" alt="">
-                </div>
-            </div>
-            <div class="motor-cards">
-                <div class="card">
-                    <img src="/images/motor.png" class="product-image">
-                    <div class="price">
-                        <p>2 600 ₽</p>
-                    </div>
-                    <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
-                    <div class="availability">
-                        <div class="star-text">
-                            <img src="/images/star.png" alt="">
-                            <span>0</span>
-                        </div>
-                        <p>Есть в наличии</p>
-                    </div>
-                    <div class="cart-divs">
-                        <button class="add-to-cart">В корзину</button>
-                        <div class="icon-divs">
-                            <img src="/images/like.png" alt="">
-                            <img src="/images/table.png" alt="">
-                        </div>
+                    <div>
+                        <button class="orginal">Original</button>
+                        <button class="brand">Brand</button>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="/images/motor.png" class="product-image">
-                    <div class="price">
-                        <p>2 600 ₽</p>
-                    </div>
-                    <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
-                    <div class="availability">
-                        <div class="star-text">
-                            <img src="/images/star.png" alt="">
-                            <span>0</span>
-                        </div>
-                        <p>Есть в наличии</p>
-                    </div>
-                    <div class="cart-divs">
-                        <button class="add-to-cart">В корзину</button>
-                        <div class="icon-divs">
-                            <img src="/images/like.png" alt="">
-                            <img src="/images/table.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/images/motor.png" class="product-image">
-                    <div class="price">
-                        <p>2 600 ₽</p>
-                    </div>
-                    <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
-                    <div class="availability">
-                        <div class="star-text">
-                            <img src="/images/star.png" alt="">
-                            <span>0</span>
-                        </div>
-                        <p>Есть в наличии</p>
-                    </div>
-                    <div class="cart-divs">
-                        <button class="add-to-cart">В корзину</button>
-                        <div class="icon-divs">
-                            <img src="/images/like.png" alt="">
-                            <img src="/images/table.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/images/motor.png" class="product-image">
-                    <div class="price">
-                        <p>2 600 ₽</p>
-                    </div>
-                    <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
-                    <div class="availability">
-                        <div class="star-text">
-                            <img src="/images/star.png" alt="">
-                            <span>0</span>
-                        </div>
-                        <p>Есть в наличии</p>
-                    </div>
-                    <div class="cart-divs">
-                        <button class="add-to-cart">В корзину</button>
-                        <div class="icon-divs">
-                            <img src="/images/like.png" alt="">
-                            <img src="/images/table.png" alt="">
-                        </div>
-                    </div>
+                <div class="motor-arrow-div swiper-button-next">
+                    <img src="/images/arrow-left.png" alt="Next">
                 </div>
             </div>
 
+            <div class="motor-cards swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-divs">
+                            <button class="add-to-cart">В корзину</button>
+                            <div class="icon-divs">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-divs">
+                            <button class="add-to-cart">В корзину</button>
+                            <div class="icon-divs">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-divs">
+                            <button class="add-to-cart">В корзину</button>
+                            <div class="icon-divs">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-divs">
+                            <button class="add-to-cart">В корзину</button>
+                            <div class="icon-divs">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-divs">
+                            <button class="add-to-cart">В корзину</button>
+                            <div class="icon-divs">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-divs">
+                            <button class="add-to-cart">В корзину</button>
+                            <div class="icon-divs">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="product-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-divs">
+                            <button class="add-to-cart">В корзину</button>
+                            <div class="icon-divs">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
+
+    <div class="swiper new-swiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="/images/Vector (1).png">
+                    <img src="/images/Vector (1).png" alt="Slide 1">
                 </div>
                 <div class="swiper-slide">
-                    <img src="/images/Vector (2).png">
+                    <img src="/images/Vector (2).png" alt="Slide 2">
                 </div>
                 <div class="swiper-slide">
-                    <img src="/images/Vector (3).png">
+                    <img src="/images/Vector (3).png" alt="Slide 3">
                 </div>
                 <div class="swiper-slide">
-                    <img src="/images/Vector (4).png">
+                    <img src="/images/Vector (4).png" alt="Slide 4">
                 </div>
                 <div class="swiper-slide">
-                    <img src="/images/Vector (5).png">
+                    <img src="/images/Vector (5).png" alt="Slide 5">
                 </div>
                 <div class="swiper-slide">
-                    <img src="/images/Vector (6).png">
+                    <img src="/images/Vector (6).png" alt="Slide 6">
                 </div>
                 <div class="swiper-slide">
-                    <img src="/images/Vector (7).png">
+                    <img src="/images/Vector (7).png" alt="Slide 7">
                 </div>
                 <div class="swiper-slide">
-                    <img src="/images/Vector (8).png">
+                    <img src="/images/Vector (8).png" alt="Slide 8">
                 </div>
             </div>
-            <div class="swiper-buttons">
-                <button class="swiper-button-prev"><img src="/images/arrow-left-with-bg.png" alt=""></button>
-                <button class="swiper-button-next"><img src="/images/arrow-right-with-bg.png" alt=""></button>
+            <div class="new-swiper-buttons">
+                <img src="/images/arrow-left-with-bg.png" alt="Previous"
+                    class="swiper-button-prev new-swiper-button-prev">
+                <img src="/images/arrow-right-with-bg.png" alt="Next" class="swiper-button-next new-swiper-button-next">
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- copy -->
+
+        <div class="parts">
+            <div class="parts-header" style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; flex-direction: column; gap: 27px;">
+                    <h2>Автозапчасти</h2>
+                    <div>
+                        <button class="btn-original">Original</button>
+                        <button class="btn-aftermarket">Aftermarket</button>
+                    </div>
+                </div>
+                <div class="parts-arrow-div swiper-button-next">
+                    <img src="/images/arrow-left.png" alt="Next">
+                </div>
+            </div>
+        
+            <div class="parts-cards swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide part-card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="part-price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="part-description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="part-availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-actions">
+                            <button class="btn-add-to-cart">В корзину</button>
+                            <div class="icon-actions">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide part-card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="part-price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="part-description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="part-availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-actions">
+                            <button class="btn-add-to-cart">В корзину</button>
+                            <div class="icon-actions">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide part-card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="part-price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="part-description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="part-availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-actions">
+                            <button class="btn-add-to-cart">В корзину</button>
+                            <div class="icon-actions">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide part-card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="part-price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="part-description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="part-availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-actions">
+                            <button class="btn-add-to-cart">В корзину</button>
+                            <div class="icon-actions">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide part-card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="part-price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="part-description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="part-availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-actions">
+                            <button class="btn-add-to-cart">В корзину</button>
+                            <div class="icon-actions">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide part-card">
+                        <div class="image-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/motor.png" class="part-image" alt="Motor Oil">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="part-price">
+                            <p>2 600 ₽</p>
+                        </div>
+                        <p class="part-description">Моторное масло Lukoil Genesis Armortech 5W-40, 4 л в Самаре</p>
+                        <div class="part-availability">
+                            <div class="star-text">
+                                <img src="/images/star.png" alt="Star">
+                                <span>0</span>
+                            </div>
+                            <p>Есть в наличии</p>
+                        </div>
+                        <div class="cart-actions">
+                            <button class="btn-add-to-cart">В корзину</button>
+                            <div class="icon-actions">
+                                <img src="/images/like.png" alt="Like">
+                                <img src="/images/table.png" alt="Table">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
+        
     </div>
+
+    <!-- copy -->
+    <div class="swiper new-swiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/images/Vector (1).png" alt="Slide 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/Vector (2).png" alt="Slide 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/Vector (3).png" alt="Slide 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/Vector (4).png" alt="Slide 4">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/Vector (5).png" alt="Slide 5">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/Vector (6).png" alt="Slide 6">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/Vector (7).png" alt="Slide 7">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/Vector (8).png" alt="Slide 8">
+                </div>
+            </div>
+            <div class="new-swiper-buttons">
+                <img src="/images/arrow-left-with-bg.png" alt="Previous" class="swiper-button-prev new-swiper-button-prev">
+                <img src="/images/arrow-right-with-bg.png" alt="Next" class="swiper-button-next new-swiper-button-next">
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>

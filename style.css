@@ -391,20 +391,18 @@
   border-radius: 15px;
   border: 2px solid #000;
   background: rgba(217, 217, 217, 0);
-  border-radius: 10px;
   text-align: start;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.product-image {
-  height: auto;
-  border-radius: 10px;
+/* Cart container */
+.cart-divs {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin: auto;
 }
 
+/* Price style */
 .price {
   font-size: 24px;
   font-weight: bold;
@@ -412,12 +410,19 @@
   margin: 15px 0;
 }
 
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+
+/* Description style */
 .description {
   font-size: 16px;
   color: #333;
   margin: 10px 0;
 }
 
+/* Availability style */
 .availability {
   display: flex;
   align-items: center;
@@ -427,13 +432,15 @@
   margin: 10px 0;
 }
 
-.availability .star-text {
+/* Star rating style */
+.part-availability .star-text {
   display: flex;
   align-items: center;
   gap: 5px;
   color: black;
 }
 
+/* Add to cart button */
 .add-to-cart {
   background-color: #d02c2c;
   color: #fff;
@@ -445,122 +452,438 @@
   cursor: pointer;
   font-size: 12px;
 }
-.cart-divs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
+/* Icon container */
 .icon-divs {
   display: flex;
   align-items: start;
   gap: 15px;
 }
 
-.icon-divs img {
-  cursor: pointer;
-}
-
+/* Add to cart button hover effect */
 .add-to-cart:hover {
   background-color: #a82323;
 }
 
-.motor .orginal {
+/* parts buttons */
+.motor .orginal,
+.motor .brand {
   border-radius: 5px;
-  background: #d02c2c;
   width: 180px;
   height: 44.967px;
   flex-shrink: 0;
-  color: #fff;
-  font-size: 15px;
   border: none;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
-.motor button {
-  margin-top: 27px;
+/* orginal button */
+.motor .orginal {
+  background: #d02c2c;
+  color: #fff;
 }
 
+/* btn-aftermarket button */
+.motor .brand {
+  background: #d9d9d9;
+  color: #000;
+  margin-left: 32px;
+}
+
+/* Arrow button */
 .motor .motor-arrow-div {
   width: 55px;
   height: 54.96px;
+  position: absolute;
+  top: 10%;
   flex-shrink: 0;
   border-radius: 35px;
   background: #e0e0e0;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
-.motor .brand {
+/* parts section */
+.motor {
+  position: relative;
+  margin-top: 180px;
+}
+
+/* Product image style */
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* parts cards container */
+.motor-cards {
+  display: flex;
+  align-items: start;
+  overflow: hidden;
+  margin-top: 32px;
+}
+
+/* Swiper slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 300px;
+}
+
+/* Swiper styles */
+.swiper {
+  height: 150px;
+  background: #ededed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.swiper-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+}
+
+/* Swiper pagination */
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  margin: 0 4px;
+  display: inline-block;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #d02c2c;
+}
+
+/* Swiper slide image */
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Swiper buttons */
+.swiper-buttons {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: all;
+  width: 40px;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  left: 2%;
+}
+
+.swiper-button-next {
+  position: absolute;
+  right: 2%;
+}
+
+/* new */
+
+.new-swiper {
+  width: 100%;
+  position: relative;
+}
+
+.new-swiper .swiper-container {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.new-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-swiper-buttons {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.new-swiper-buttons img {
+  width: 55px;
+  height: 54.943px;
+  flex-shrink: 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  cursor: pointer; 
+  pointer-events: all; 
+  width: 40px; 
+  height: auto;
+}
+
+
+/* copy */
+
+.part-card {
+  width: 280px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #000;
+  background: rgba(217, 217, 217, 0);
+  text-align: start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart container */
+.cart-actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Price style */
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #090909;
+  margin: 15px 0;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+
+/* Description style */
+.part-description {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* part-availability style */
+.part-availability {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: green;
+  margin: 10px 0;
+}
+
+/* Star rating style */
+.part-availability .star-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: black;
+}
+
+/* Add to cart button */
+.btn-add-to-cart{
+  background-color: #d02c2c;
+  color: #fff;
+  border: none;
+  width: 115.65px;
+  height: 28.797px;
+  flex-shrink: 0;
   border-radius: 5px;
-  background: #d9d9d9;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Icon container */
+.icon-actions {
+  display: flex;
+  align-items: start;
+  gap: 15px;
+}
+
+/* Add to cart button hover effect */
+.add-to-cart:hover {
+  background-color: #a82323;
+}
+
+/* motor buttons */
+.parts .btn-original,
+.parts .btn-aftermarket {
+  border-radius: 5px;
   width: 180px;
   height: 44.967px;
   flex-shrink: 0;
   border: none;
-  color: #000;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+/* Original button */
+.parts .btn-original {
+  background: #d02c2c;
+  color: #fff;
+}
+
+/* btn-aftermarket button */
+.parts .btn-aftermarket {
+  background: #d9d9d9;
+  color: #000;
   margin-left: 32px;
 }
 
-.motor-cards {
+/* Arrow button */
+.parts .parts-arrow-div {
+  width: 55px;
+  height: 54.96px;
+  position: absolute;
+  top: 10%;
+  flex-shrink: 0;
+  border-radius: 35px;
+  background: #e0e0e0;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 80px;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* parts section */
+.parts {
+  position: relative;
+  margin-top: 180px;
+}
+
+/* Product image style */
+.part-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* parts cards container */
+.parts-cards {
+  display: flex;
+  align-items: start;
+  overflow: hidden;
   margin-top: 32px;
 }
 
+/* Swiper slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 300px;
+}
 
+/* Swiper styles */
+.swiper {
+  height: 150px;
+  background: #ededed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
 
 .swiper-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 150px;
-    background: #ededed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .swiper-wrapper {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .swiper-slide {
-    min-width: 240px;
-    margin-top: 60px;
-    flex-shrink: 0;
-    margin: 0 10px;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
-  }
-  
-  .swiper-slide img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .swiper-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    border: none;
-    outline: none;
-  }
-  
+.swiper-wrapper {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+}
+
+/* Swiper pagination */
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  margin: 0 4px;
+  display: inline-block;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #d02c2c;
+}
+
+/* Swiper slide image */
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Swiper buttons */
+.swiper-buttons {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: all;
+  width: 40px;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  left: 2%;
+}
+
+.swiper-button-next {
+  position: absolute;
+  right: 2%;
+}
