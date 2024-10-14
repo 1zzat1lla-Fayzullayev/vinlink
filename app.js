@@ -222,4 +222,10 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
-  
+
+document.querySelectorAll('.accordion').forEach((accordion) => {
+  accordion.addEventListener('click', function () {
+    const ul = this.querySelector('ul');
+    ul.classList.toggle('active');
+  });
+});
