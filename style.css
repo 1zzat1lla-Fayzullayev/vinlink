@@ -1505,73 +1505,133 @@
 
 /* Footer start */
 
+/* Umumiy styling katta ekranlar uchun */
+
 .footer {
+  margin-top: 110px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding-bottom: 70px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.footer .tabe-uil {
-  margin-top: 85px;
-  flex: 1 1 100%;
+.first-tabe,
+.second-tabe,
+.third-tabe,
+.forth-tabe {
+  width: 23%;
 }
 
-@media (min-width: 768px) {
-  .footer {
-    flex-wrap: nowrap;
-  }
-  .footer .tabe-uil {
-    flex: 1 1 25%;
-    margin-top: 0;
+@media screen and (min-width: 768px) {
+  .first-tabe .seconde-pc {
+    display: none;
   }
 }
 
-.footer .dark-inter {
-  font-size: 20px;
-  font-weight: 600;
-  color: #000000;
-  margin-bottom: 20px;
+.logo-bar img {
+  max-width: 100%;
 }
 
-.footer .tabe-uil ul {
+.text-sbare-pc p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.text-sbare-mob {
+  padding-bottom: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .text-sbare-mob {
+    display: none;
+  }
+}
+
+.dark-inter-mob {
   display: none;
-  flex-direction: column;
-  gap: 15px;
 }
 
-.footer .tabe-uil ul.active {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .footer svg {
+    display: none;
+  }
 }
 
-.footer .text-sbare {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  padding-left: 24px;
-}
-
-.footer .text-sbare p {
-  font-size: 18px;
-  font-weight: 400;
-  color: #000;
-}
-
-.footer .forth-tabe {
-  display: flex;
-  flex-direction: column;
-  gap: 57px;
-}
-
-.footer .thirde .icons {
-  display: flex;
-  flex-direction: row;
-  gap: 19px;
+.thin-mob {
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 768px) {
-  .footer .logo-bar{
-      
+  .text-sbare-pc {
+    display: none;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Accordion styling */
+.accordion-header {
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .accordion-header {
+    /* background-color: #f1f1f1; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.accordion-content {
+  display: block; /* Accordion always open on larger screens */
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .accordion-content {
+    display: none; /* Accordion content hidden by default on mobile */
+  }
+
+  /* Show content when accordion is opened */
+  .accordion.open .accordion-content {
+    display: block;
+  }
+
+  .first-tabe,
+  .second-tabe,
+  .third-tabe,
+  .forth-tabe {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 

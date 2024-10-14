@@ -223,9 +223,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.querySelectorAll('.accordion').forEach((accordion) => {
-  accordion.addEventListener('click', function () {
-    const ul = this.querySelector('ul');
-    ul.classList.toggle('active');
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const accordion = header.parentElement;
+    accordion.classList.toggle('open');
   });
 });
