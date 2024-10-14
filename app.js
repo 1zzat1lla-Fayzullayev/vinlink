@@ -229,3 +229,23 @@ document.querySelectorAll('.accordion-header').forEach(header => {
     accordion.classList.toggle('open');
   });
 });
+
+
+let isMenuOpen = false;
+
+function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  const burger = document.querySelector('.burger');
+
+  isMenuOpen = !isMenuOpen;
+
+  if (isMenuOpen) {
+    menu.classList.remove('hidden');
+    menu.classList.add('visible'); 
+    burger.classList.add('open');
+  } else {
+    menu.classList.remove('visible');
+    menu.classList.add('hidden');
+    burger.classList.remove('open');
+  }
+}
