@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       1400: { slidesPerView: 6, spaceBetween: 10 },
       1200: { slidesPerView: 4, spaceBetween: 15 },
-      992: { slidesPerView: 3, spaceBetween: 10 },
-      300: { slidesPerView: 2, spaceBetween: 5 },
+      992: { slidesPerView: 4, spaceBetween: 10 },
+      300: { slidesPerView: 3, spaceBetween: 5 },
     },
   });
 
