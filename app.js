@@ -89,11 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 10,
     loop: true,
     navigation: {
-      nextEl: '.header-arrow-next', 
-      prevEl: '.header-arrow-prev', 
+      nextEl: '.header-arrow-next',
+      prevEl: '.header-arrow-prev',
     },
     pagination: {
-      el: '.header-pagination', 
+      el: '.header-pagination',
       clickable: true,
     },
   });
@@ -252,22 +252,38 @@ function toggleMenu() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const cardElements = document.querySelectorAll('.all-cards div');
+  const cardListItems = document.querySelectorAll('.cardLists div');
 
   const activeItem = localStorage.getItem('activeCard');
 
   if (activeItem) {
-      cardElements.forEach(card => card.classList.remove('active'));
-
-      document.querySelector(`.all-cards div:nth-child(${activeItem})`).classList.add('active');
+    cardElements.forEach(card => card.classList.remove('active'));
+    document.querySelector(`.all-cards div:nth-child(${activeItem})`).classList.add('active');
+    filterCards(cardElements[activeItem - 1].textContent.trim());
   }
 
+  // Add click event listener for filter buttons
   cardElements.forEach((card, index) => {
-      card.addEventListener('click', () => {
-          cardElements.forEach(c => c.classList.remove('active'));
+    card.addEventListener('click', () => {
+      cardElements.forEach(c => c.classList.remove('active'));
 
-          card.classList.add('active');
+      card.classList.add('active');
 
-          localStorage.setItem('activeCard', index + 1);
-      });
+      localStorage.setItem('activeCard', index + 1);
+
+      const filterText = card.textContent.trim();
+      filterCards(filterText);
+    });
   });
+
+  function filterCards(category) {
+    cardListItems.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      if (cardCategory === category || category === "Все") {
+        card.style.display = "flex"; 
+      } else {
+        card.style.display = "none"; 
+      }
+    });
+  }
 });
