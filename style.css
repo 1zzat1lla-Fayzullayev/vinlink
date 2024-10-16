@@ -384,9 +384,11 @@
 
 .cards .cardLists {
   margin-top: 37px;
-  flex-wrap: wrap;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(
+    6,
+    1fr
+  ); 
   gap: 27px;
 }
 
@@ -394,11 +396,47 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 208px;
+  width: 100%; 
   height: 87.496px;
-  flex-shrink: 0;
   border-radius: 5px;
   background: #eaeaea;
+}
+
+@media screen and (max-width: 768px) {
+  .cardLists div {
+    width: 132.504px;
+    height: 55.738px;
+    flex-shrink: 0;
+  }
+  .cardLists div img {
+    width: 32.489px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards .cardLists {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .cards .cardLists {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .cards .cardLists {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 320px) {
+  .cards .cardLists {
+    grid-template-columns: repeat(1, 1fr); 
+  }
 }
 
 .category {

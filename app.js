@@ -248,3 +248,26 @@ function toggleMenu() {
     burger.classList.remove('open');
   }
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cardElements = document.querySelectorAll('.all-cards div');
+
+  const activeItem = localStorage.getItem('activeCard');
+
+  if (activeItem) {
+      cardElements.forEach(card => card.classList.remove('active'));
+
+      document.querySelector(`.all-cards div:nth-child(${activeItem})`).classList.add('active');
+  }
+
+  cardElements.forEach((card, index) => {
+      card.addEventListener('click', () => {
+          cardElements.forEach(c => c.classList.remove('active'));
+
+          card.classList.add('active');
+
+          localStorage.setItem('activeCard', index + 1);
+      });
+  });
+});
