@@ -282,7 +282,7 @@
   .header .swiper-slide p {
     padding: 7px 30px;
   }
-  .header .swiper-slide button{
+  .header .swiper-slide button {
     margin: 7px 30px;
   }
 }
@@ -410,20 +410,24 @@
 
 .categoryCards {
   margin-top: 45px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 100%;
 }
 
 .category .categoryCards div {
-  width: 291px;
   height: 393.762px;
   flex-shrink: 0;
   border-radius: 15px;
   border: 2px solid #000;
   background: rgba(217, 217, 217, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .category .categoryCards div {
+    height: 300px;
+  }
 }
 
 .category button {
@@ -454,6 +458,17 @@
   border-bottom: 1px solid black;
 }
 
+@media screen and (max-width: 768px) {
+  .categoryCards div h4 {
+    color: #090909;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
 .categoryCards div {
   padding-left: 20px;
   position: relative;
@@ -472,6 +487,23 @@
   padding-top: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .categoryCards div ul li {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .categoryCards div ul li {
+    color: #090909;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
 .categoryCards div button {
   width: 181.439px;
   height: 52.952px;
@@ -487,6 +519,22 @@
   position: absolute;
   bottom: 35px;
 }
+
+@media screen and (max-width: 768px) {
+  .categoryCards div button {
+    width: 122.57px;
+    height: 31.437px;
+    flex-shrink: 0;
+    bottom: 15px;
+    color: #fff;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
 .category h2 {
   color: #000;
   font-size: 40px;
@@ -494,6 +542,16 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .categoryCards {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 cards per row on small screens */
+  }
 }
 
 .card {

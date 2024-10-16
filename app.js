@@ -89,11 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 10,
     loop: true,
     navigation: {
-      nextEl: '.header-arrow-next', // Arrow for next slide
-      prevEl: '.header-arrow-prev', // Arrow for previous slide
+      nextEl: '.header-arrow-next', 
+      prevEl: '.header-arrow-prev', 
     },
     pagination: {
-      el: '.header-pagination', // Add pagination here if needed
+      el: '.header-pagination', 
       clickable: true,
     },
   });
