@@ -1,8 +1,6 @@
-// Swiper Navigation and Initialization for All Instances
 document.addEventListener("DOMContentLoaded", function () {
   const imageSliders = document.querySelectorAll('.image-slider');
 
-  // Initialize all image sliders
   imageSliders.forEach((slider) => {
     new Swiper(slider, {
       slidesPerView: 1,
@@ -15,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Initialize motorSwiper
   const motorSwiper = new Swiper('.motor-cards', {
     slidesPerView: 4,
     spaceBetween: 20,
@@ -36,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Navigation for motorSwiper buttons
   document.querySelector('.motor-arrow-div').addEventListener('click', () => {
     motorSwiper.slideNext();
   });
@@ -45,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     motorSwiper.slidePrev();
   });
 
-  // Initialize newSwiper
   const newSwiper = new Swiper('.new-swiper .swiper-container', {
     slidesPerView: 4,
     spaceBetween: 20,
@@ -62,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Custom Slide Functionality (Optional, if needed)
   const swiperWrapper = document.querySelector('.swiper-wrapper');
   const slides = document.querySelectorAll('.swiper-slide');
   const prevButton = document.querySelector('.swiper-button-prev');
@@ -71,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 0;
 
   const showSlide = (index) => {
-    const slideWidth = slides[0].offsetWidth + 20; // including margin
+    const slideWidth = slides[0].offsetWidth + 20;
     swiperWrapper.style.transform = `translateX(-${index * slideWidth}px)`;
   };
 
@@ -85,12 +79,28 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(currentIndex);
   });
 
-  // Initial load
   showSlide(currentIndex);
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize newSwiper
+  const headerSwiper = new Swiper('.header-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+      nextEl: '.header-arrow-next', // Arrow for next slide
+      prevEl: '.header-arrow-prev', // Arrow for previous slide
+    },
+    pagination: {
+      el: '.header-pagination', // Add pagination here if needed
+      clickable: true,
+    },
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
   const newSwiper = new Swiper('.new-swiper .swiper-container', {
     slidesPerView: 6,
     spaceBetween: 10,
@@ -116,10 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: '.motor-arrow-div',
       prevEl: '.motor-arrow-prev-div',
     },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+
     breakpoints: {
       1400: { slidesPerView: 4, spaceBetween: 20 },
       1200: { slidesPerView: 3, spaceBetween: 15 },
@@ -148,7 +155,6 @@ const newSwiper = new Swiper('.new-swiper .swiper-container', {
   loop: true,
 });
 
-// Optional: if you want to handle the resize event
 window.addEventListener('resize', function () {
   newSwiper.update();
 });
@@ -156,7 +162,6 @@ window.addEventListener('resize', function () {
 document.addEventListener("DOMContentLoaded", function () {
   const imageSliders = document.querySelectorAll('.image-slider');
 
-  // Initialize all image sliders
   imageSliders.forEach((slider) => {
     new Swiper(slider, {
       slidesPerView: 1,
@@ -169,19 +174,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Initialize partsSwiper
   const partsSwiper = new Swiper('.parts-cards', {
     slidesPerView: 4,
     spaceBetween: 20,
     loop: true,
     navigation: {
       nextEl: '.parts-arrow-div',
-      prevEl: '.parts-arrow-prev-div', // Make sure to update this if you have a previous arrow element
+      prevEl: '.parts-arrow-prev-div',
     },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+
     breakpoints: {
       1400: { slidesPerView: 4, spaceBetween: 20 },
       1200: { slidesPerView: 3, spaceBetween: 15 },
@@ -190,7 +191,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Navigation for partsSwiper buttons
   document.querySelector('.parts-arrow-div').addEventListener('click', () => {
     partsSwiper.slideNext();
   });
@@ -201,7 +201,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize videoSwiper
   const videoSwiper = new Swiper('.video-swiper', {
     slidesPerView: 4,
     spaceBetween: 20,
@@ -241,7 +240,7 @@ function toggleMenu() {
 
   if (isMenuOpen) {
     menu.classList.remove('hidden');
-    menu.classList.add('visible'); 
+    menu.classList.add('visible');
     burger.classList.add('open');
   } else {
     menu.classList.remove('visible');
